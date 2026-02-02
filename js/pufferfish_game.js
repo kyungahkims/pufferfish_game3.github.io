@@ -235,3 +235,66 @@ if (fishBtn && fishImg) {
 		}
 	});
 }
+
+/* 타이핑 */
+document.querySelectorAll('input[type="text"], textarea').forEach(el => {
+  const wrap = el.closest('div');
+  const typing = wrap.querySelector('.typing span');
+
+  if (!typing) return;
+
+  let maxLength = el.getAttribute('maxlength');
+
+  if (!maxLength) {
+    const totalText = wrap.querySelector('.typing').textContent;
+    maxLength = totalText.split('/')[1];
+  }
+
+  el.addEventListener('input', () => {
+    const length = el.value.length;
+    typing.textContent = length;
+    wrap.querySelector('.typing').classList.toggle('active', length > 0);
+  });
+});
+
+/* 문의하기 탭 */
+const tabButtons = document.querySelectorAll('.tab_wrap button');
+const tabContents = document.querySelectorAll('.tabcontent');
+
+tabButtons.forEach((btn, index) => {
+  btn.addEventListener('click', () => {
+    tabButtons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    tabContents.forEach(c => c.style.display = 'none');
+    tabContents[index].style.display = 'block';
+  });
+});
+
+tabButtons[0]?.click();
+
+/* 질문 & 답변 */
+const questions = document.querySelectorAll('.inquiry .question');
+
+questions.forEach(question => {
+  question.addEventListener('click', () => {
+    const answer = question.parentElement.querySelector('.answer');
+    const img = question.querySelector('img');
+
+    const isOpen = answer.classList.contains('open');
+
+    if (isOpen) {
+      answer.style.maxHeight = null;
+      answer.classList.remove('open');
+      question.classList.remove('active');
+    } else {
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+      answer.classList.add('open');
+      question.classList.add('active');
+    }
+
+    img?.classList.toggle('active');
+  });
+});
+
+
