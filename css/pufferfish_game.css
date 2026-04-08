@@ -168,11 +168,16 @@ header .aquarium_btn_wrap .aquarium_btn .num {
 }
 
 .initialization_wrap {
+  position: absolute;
+  top: 0;
+  width: calc(100% - 40px);
+  max-width: 390px;
   text-align: center;
   border-radius: 10px;
   background-color: rgba(30, 67, 97, 0.9);
   margin: 0 20px;
   padding: 18px 10px 19px;
+  z-index: 1000;
 }
 .initialization_wrap h3 {
   font-size: 16px;
@@ -1045,13 +1050,26 @@ header .aquarium_btn_wrap .aquarium_btn .num {
   background: url("../img/img-aquarium.svg") no-repeat center;
   margin: 18px auto 0;
 }
-.wrap.aquarium_wrap .aquarium_box p {
-  font-size: 30px;
+.wrap.aquarium_wrap .aquarium_box > div {
+  text-align: center;
+}
+.wrap.aquarium_wrap .aquarium_box > div p {
+  font-size: 22px;
   font-weight: bold;
   text-align: center;
-  line-height: 1.33;
-  letter-spacing: -1.2px;
+  letter-spacing: -0.88px;
   color: #000;
+}
+.wrap.aquarium_wrap .aquarium_box > div button {
+  width: 131px;
+  height: 44px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.56px;
+  color: #fff;
+  border-radius: 10px;
+  background-color: #204bd8;
+  margin-top: 17px;
 }
 .wrap.aquarium_wrap .aquarium_box .aquarium_fish_group {
   position: relative;
@@ -2125,7 +2143,7 @@ header .aquarium_btn_wrap .aquarium_btn .num {
   font-weight: bold;
   letter-spacing: -0.96px;
   color: #fff82c;
-  margin-bottom: 64px;
+  margin: 18px 0 47px;
 }
 .popup_modal_wrap4 .empty {
   font-size: 20px;
