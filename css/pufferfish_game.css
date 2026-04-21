@@ -842,6 +842,15 @@ header .aquarium_btn_wrap .aquarium_btn .num {
   transform: translateX(-50%);
   z-index: 100;
 }
+.gameover_wrap.sad {
+  top: 16%;
+}
+.gameover_wrap.sad .fish {
+  width: 272px;
+}
+.gameover_wrap.sad .tool {
+  top: 227px;
+}
 .gameover_wrap .fish {
   width: 280px;
 }
@@ -1035,6 +1044,104 @@ header .aquarium_btn_wrap .aquarium_btn .num {
   height: calc(100% - 60px);
   overflow-y: auto;
 }
+.wrap.aquarium_wrap .top_box {
+  padding: 0 18px 25px;
+}
+.wrap.aquarium_wrap .top_box .pop_title {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.72px;
+  color: #000;
+}
+.wrap.aquarium_wrap .top_box p {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.56px;
+  color: #666;
+}
+.wrap.aquarium_wrap .top_box p:not(:last-child) {
+  margin-bottom: 12px;
+}
+.wrap.aquarium_wrap .top_box p span {
+  display: inline-flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 16px;
+  height: 16px;
+  font-size: 10px;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: -0.38px;
+  border-radius: 50%;
+  background-color: #204bd8;
+  padding-top: 1px;
+  margin-right: 10px;
+}
+.wrap.aquarium_wrap .fish_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  gap: 7px;
+  margin-top: 28px;
+}
+.wrap.aquarium_wrap .fish_wrap li {
+  width: calc(50% - 4px);
+  border-radius: 20px;
+  background-color: #f6f6f6;
+  padding-bottom: 15px;
+}
+.wrap.aquarium_wrap .fish_wrap li .sub_fish {
+  width: 115px;
+  margin-top: 5px;
+}
+.wrap.aquarium_wrap .fish_wrap li div {
+  font-size: 12px;
+  letter-spacing: -0.48px;
+  margin: 2px 0;
+}
+.wrap.aquarium_wrap .fish_wrap li strong {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.36;
+  letter-spacing: -0.56px;
+}
+.wrap.aquarium_wrap .fish_wrap li:nth-child(1) > strong {
+  color: #62a247;
+}
+.wrap.aquarium_wrap .fish_wrap li:nth-child(2) > strong {
+  color: #ed5757;
+}
+.wrap.aquarium_wrap .fish_wrap li:nth-child(3) > strong {
+  color: #ff7d21;
+}
+.wrap.aquarium_wrap .fish_wrap li:nth-child(4) > strong {
+  color: #1e7dd3;
+}
+.wrap.aquarium_wrap .info_box {
+  background-color: #e9e9e9;
+  padding: 28px 20px 25px;
+}
+.wrap.aquarium_wrap .info_box h4 {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.56px;
+  color: #000;
+}
+.wrap.aquarium_wrap .info_box ul {
+  margin-top: 12px;
+}
+.wrap.aquarium_wrap .info_box ul li {
+  display: flex;
+  font-size: 12px;
+  line-height: 1.83;
+  letter-spacing: -0.48px;
+  color: #666;
+}
+.wrap.aquarium_wrap .info_box ul li::before {
+  content: "·";
+  margin-right: 5px;
+}
 .wrap.aquarium_wrap .title {
   font-size: 16px;
   letter-spacing: -0.64px;
@@ -1212,6 +1319,141 @@ header .aquarium_btn_wrap .aquarium_btn .num {
   line-height: 1.83;
 }
 .wrap.aquarium_wrap .info_box ul li::before {
+  content: "·";
+  margin-right: 5px;
+}
+
+/* pufferfish_game1_8 */
+.wrap.information_wrap {
+  overflow-y: auto;
+  background: none;
+}
+.wrap.information_wrap header {
+  height: 60px;
+  background-color: #fff;
+}
+.wrap.information_wrap header h2 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.8px;
+}
+.wrap.information_wrap header .inquiry_link {
+  position: absolute;
+  right: 28px;
+  font-size: 16px;
+  letter-spacing: -0.64px;
+  color: #204bd8;
+}
+.wrap.information_wrap .contents {
+  height: calc(100% - 60px);
+  overflow-y: auto;
+}
+.wrap.information_wrap .contents .title {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.72px;
+  color: #000;
+  margin-bottom: 18px;
+}
+.wrap.information_wrap .top_box {
+  padding: 20px 20px 36px;
+}
+.wrap.information_wrap .top_box p {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.56px;
+  color: #666;
+}
+.wrap.information_wrap .top_box p:not(:last-child) {
+  margin-bottom: 14px;
+}
+.wrap.information_wrap .top_box p span {
+  display: inline-flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 16px;
+  height: 16px;
+  font-size: 10px;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: -0.38px;
+  border-radius: 50%;
+  background-color: #204bd8;
+  padding-top: 1px;
+  margin-right: 10px;
+}
+.wrap.information_wrap .fish_box {
+  padding: 0 20px 40px;
+}
+.wrap.information_wrap .fish_box .fish_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  gap: 7px;
+}
+.wrap.information_wrap .fish_box .fish_wrap li {
+  width: calc(50% - 4px);
+  border-radius: 20px;
+  background-color: #f6f6f6;
+  padding-bottom: 18px;
+}
+.wrap.information_wrap .fish_box .fish_wrap li .sub_fish {
+  width: 115px;
+  margin-top: 7px;
+}
+.wrap.information_wrap .fish_box .fish_wrap li div {
+  font-size: 12px;
+  letter-spacing: -0.48px;
+  margin: 2px 0;
+}
+.wrap.information_wrap .fish_box .fish_wrap li strong {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.36;
+  letter-spacing: -0.56px;
+}
+.wrap.information_wrap .fish_box .fish_wrap li:nth-child(3) > div {
+  margin-bottom: 6px;
+}
+.wrap.information_wrap .fish_box .fish_wrap li:nth-child(4) > div {
+  margin-bottom: 6px;
+}
+.wrap.information_wrap .fish_box .fish_wrap li:nth-child(1) > strong {
+  color: #62a247;
+}
+.wrap.information_wrap .fish_box .fish_wrap li:nth-child(2) > strong {
+  color: #ed5757;
+}
+.wrap.information_wrap .fish_box .fish_wrap li:nth-child(3) > strong {
+  color: #ff7d21;
+}
+.wrap.information_wrap .fish_box .fish_wrap li:nth-child(4) > strong {
+  color: #1e7dd3;
+}
+.wrap.information_wrap .info_box {
+  background-color: #e9e9e9;
+  padding: 28px 20px 25px;
+}
+.wrap.information_wrap .info_box h4 {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.56px;
+  color: #000;
+}
+.wrap.information_wrap .info_box ul {
+  margin-top: 12px;
+}
+.wrap.information_wrap .info_box ul li {
+  display: flex;
+  font-size: 12px;
+  line-height: 1.83;
+  letter-spacing: -0.48px;
+  color: #666;
+}
+.wrap.information_wrap .info_box ul li::before {
   content: "·";
   margin-right: 5px;
 }
@@ -1621,11 +1863,7 @@ header .aquarium_btn_wrap .aquarium_btn .num {
   border-radius: 20px 20px 0 0;
   background-color: #fff;
   padding: 0 15px 45px 20px;
-  transform: translate(-50%, 100%);
-  transition: all 0.3s;
-}
-.modal_wrap3 .pop3.active {
-  transform: translate(-50%, 0);
+  transform: translateX(-50%);
   transition: all 0.3s;
 }
 .modal_wrap3 .pop3 .btn_wrap {
@@ -1644,157 +1882,16 @@ header .aquarium_btn_wrap .aquarium_btn .num {
   letter-spacing: -0.64px;
   margin-top: 12px;
 }
-.modal_wrap3 .pop3 .email {
+.modal_wrap3 .pop3 .info_cont {
+  font-size: 16px;
+  line-height: 1.63;
+  letter-spacing: -0.64px;
+  color: #000;
+  padding-top: 31px;
+}
+.modal_wrap3 .pop3 .info_cont a {
   display: inline-block;
-  font-size: 16px;
-  font-weight: 500;
   color: #204bd8;
-  margin-top: 6px;
-}
-
-/* modal_wrap4 */
-.modal_wrap4 {
-  width: 100%;
-  height: calc(var(--vh, 1vh) * 100);
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0);
-  display: block;
-  transition: 0.1s;
-  overflow: hidden;
-  z-index: 999;
-}
-.modal_wrap4.active {
-  background-color: rgba(0, 0, 0, 0.3);
-}
-.modal_wrap4 .pop4 {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 100%;
-  max-width: 430px;
-  border-radius: 20px 20px 0 0;
-  background-color: #fff;
-  transform: translate(-50%, 100%);
-  transition: all 0.3s;
-  touch-action: none;
-}
-.modal_wrap4 .pop4.active {
-  transform: translate(-50%, 0);
-  transition: all 0.3s;
-}
-.modal_wrap4 .pop4 .btn_wrap {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 7px;
-}
-.modal_wrap4 .pop4 .btn_wrap .close_btn {
-  width: 90px;
-  height: 4px;
-  background: url("../img/tab.svg") no-repeat center;
-  padding: 20px;
-}
-.modal_wrap4 .pop4 .top_box {
-  padding: 0 18px 25px;
-}
-.modal_wrap4 .pop4 .title_wrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 18px;
-}
-.modal_wrap4 .pop4 .pop_title {
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: -0.72px;
-  color: #000;
-}
-.modal_wrap4 .pop4 .inquiry_link {
-  font-size: 16px;
-  letter-spacing: -0.64px;
-  color: #204bd8;
-}
-.modal_wrap4 .pop4 p {
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: -0.56px;
-  color: #666;
-}
-.modal_wrap4 .pop4 p:not(:last-child) {
-  margin-bottom: 12px;
-}
-.modal_wrap4 .pop4 p span {
-  display: inline-flex;
-  justify-content: center;
-  align-items: flex-start;
-  width: 16px;
-  height: 16px;
-  font-size: 10px;
-  font-weight: 500;
-  color: #fff;
-  letter-spacing: -0.38px;
-  border-radius: 50%;
-  background-color: #204bd8;
-  padding-top: 1px;
-  margin-right: 10px;
-}
-.modal_wrap4 .pop4 .fish_wrap {
-  position: relative;
-  width: calc(100% + 30px);
-  left: -15px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
-  column-gap: 2px;
-  margin-top: 21px;
-}
-.modal_wrap4 .pop4 .fish_wrap li .sub_fish {
-  position: relative;
-  top: 2px;
-  width: 100px;
-}
-.modal_wrap4 .pop4 .fish_wrap li div {
-  position: relative;
-  top: -4px;
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: -0.64px;
-}
-.modal_wrap4 .pop4 .fish_wrap li:nth-child(1) > div {
-  color: #ed5757;
-}
-.modal_wrap4 .pop4 .fish_wrap li:nth-child(2) > div {
-  color: #62a247;
-}
-.modal_wrap4 .pop4 .fish_wrap li:nth-child(3) > div {
-  color: #ffb315;
-  margin-top: 3px;
-}
-.modal_wrap4 .pop4 .info_box {
-  background-color: #e9e9e9;
-  padding: 28px 20px 25px;
-}
-.modal_wrap4 .pop4 .info_box h4 {
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: -0.56px;
-  color: #000;
-}
-.modal_wrap4 .pop4 .info_box ul {
-  margin-top: 12px;
-}
-.modal_wrap4 .pop4 .info_box ul li {
-  display: flex;
-  font-size: 12px;
-  line-height: 1.83;
-  letter-spacing: -0.48px;
-  color: #666;
-}
-.modal_wrap4 .pop4 .info_box ul li::before {
-  content: "·";
-  margin-right: 5px;
 }
 
 /* popup_modal_wrap */
@@ -2128,7 +2225,7 @@ header .aquarium_btn_wrap .aquarium_btn .num {
 }
 .popup_modal_wrap4 .colose_btn {
   position: absolute;
-  top: 15px;
+  top: 20px;
   right: 20px;
   display: block;
   width: 15px;
@@ -2137,6 +2234,19 @@ header .aquarium_btn_wrap .aquarium_btn .num {
 }
 .popup_modal_wrap4 .lottie {
   width: 100%;
+}
+.popup_modal_wrap4 .loading_wrap .loading_lottie {
+  width: 27px;
+  height: 20px;
+  margin: auto;
+}
+.popup_modal_wrap4 .loading_wrap::before {
+  content: "";
+  display: block;
+  width: 272px;
+  height: 207px;
+  margin: 12px auto 0;
+  background: url("../img/c-img-0001@3x.png") no-repeat center/contain;
 }
 .popup_modal_wrap4 .add {
   font-size: 24px;
@@ -2152,13 +2262,13 @@ header .aquarium_btn_wrap .aquarium_btn .num {
   color: #fff;
   margin-bottom: 32px;
 }
-.popup_modal_wrap4 .empty::before {
-  content: "";
-  display: block;
-  width: 150px;
-  height: 150px;
-  margin: 18px auto 20px;
-  background: url("../img/img-loser@3x.png") no-repeat center/contain;
+.popup_modal_wrap4 .ongoing {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.27;
+  letter-spacing: -0.44px;
+  color: #fff;
+  margin: 29px 0 8px;
 }
 .popup_modal_wrap4 .point_btn {
   width: 100%;
@@ -2213,13 +2323,15 @@ header .aquarium_btn_wrap .aquarium_btn .num {
   margin-bottom: 18px;
 }
 .popup_modal_wrap5 p {
+  display: flex;
+  align-items: center;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: -0.56px;
   color: #666;
 }
 .popup_modal_wrap5 p:not(:last-child) {
-  margin-bottom: 12px;
+  margin-bottom: 13px;
 }
 .popup_modal_wrap5 p span {
   display: inline-flex;
@@ -2237,37 +2349,45 @@ header .aquarium_btn_wrap .aquarium_btn .num {
   margin-right: 10px;
 }
 .popup_modal_wrap5 .fish_wrap {
-  position: relative;
-  width: calc(100% + 30px);
-  left: -15px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
-  column-gap: 2px;
-  margin-top: 17px;
+  gap: 7px;
+  margin-top: 28px;
+}
+.popup_modal_wrap5 .fish_wrap li {
+  width: 136px;
+  border-radius: 20px;
+  background-color: #f6f6f6;
+  padding-bottom: 15px;
 }
 .popup_modal_wrap5 .fish_wrap li .sub_fish {
-  position: relative;
-  top: 2px;
   width: 100px;
+  margin-top: 5px;
 }
 .popup_modal_wrap5 .fish_wrap li div {
-  position: relative;
-  top: -4px;
-  font-size: 16px;
+  font-size: 12px;
+  letter-spacing: -0.48px;
+  margin: 2px 0;
+}
+.popup_modal_wrap5 .fish_wrap li strong {
+  font-size: 14px;
   font-weight: 600;
-  letter-spacing: -0.64px;
+  line-height: 1.36;
+  letter-spacing: -0.56px;
 }
-.popup_modal_wrap5 .fish_wrap li:nth-child(1) > div {
-  color: #ed5757;
-}
-.popup_modal_wrap5 .fish_wrap li:nth-child(2) > div {
+.popup_modal_wrap5 .fish_wrap li:nth-child(1) > strong {
   color: #62a247;
 }
-.popup_modal_wrap5 .fish_wrap li:nth-child(3) > div {
-  color: #ffb315;
-  margin-top: 3px;
+.popup_modal_wrap5 .fish_wrap li:nth-child(2) > strong {
+  color: #ed5757;
+}
+.popup_modal_wrap5 .fish_wrap li:nth-child(3) > strong {
+  color: #ff7d21;
+}
+.popup_modal_wrap5 .fish_wrap li:nth-child(4) > strong {
+  color: #1e7dd3;
 }
 .popup_modal_wrap5 .info {
   font-size: 13px;
@@ -2279,7 +2399,7 @@ header .aquarium_btn_wrap .aquarium_btn .num {
   border: 1px solid #204bd8;
   background-color: #fff;
   padding: 13px;
-  margin-top: 25px;
+  margin-top: 20px;
 }
 
 /* inquiry_modal_wrap */
@@ -2587,4 +2707,29 @@ header .aquarium_btn_wrap .aquarium_btn .num {
   letter-spacing: -0.48px;
   color: #999;
   margin-top: 13px;
+}
+
+.roading {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  max-width: 430px;
+  height: 100vh;
+  transform: translateX(-50%);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85) 36%, rgba(0, 0, 0, 0));
+  z-index: 1001;
+}
+.roading .lottie {
+  width: 27px;
+  height: 20px;
+  margin: 115px auto 30px;
+}
+.roading p {
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.27;
+  letter-spacing: -0.44px;
+  color: #fff;
 }/*# sourceMappingURL=pufferfish_game.css.map */
