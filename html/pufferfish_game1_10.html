@@ -8,6 +8,7 @@
 	<link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="../img/favicon.ico" type="image/x-icon">
 	<script src="../js/jquery-3.5.1.min.js"></script>
+	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 	<title>복어게임</title>
 </head>
 
@@ -97,34 +98,10 @@
 			<button type="button" class="inquiry_btn">문의</button>
 		</div>
 	</div>
-	<div class="popup_modal_wrap5">
-		<div class="popup5">
-			<button type="button" class="form_close_btn" aria-label="닫기"></button>
-			<h3 class="pop_title">게임이용 방법</h3>
-			<p><span>1</span>헤엄치는 복어를 선택해요.</p>
-			<p><span>2</span>광고 미션을 완료해요.</p>
-			<p><span>3</span>복어를 터뜨리면 어항에 담겨요.</p>
-			<p><span>4</span>획득한 복어를 포인트로 교환해요.</p>
-			<ul class="fish_wrap">
-				<li>
-					<img src="../img/sub-img-01.png" alt="복어" class="sub_fish">
-					<div>배너 광고</div><strong>1P 100%</strong>
-				</li>
-				<li>
-					<img src="../img/s-img-07@3x.png" alt="복어" class="sub_fish">
-					<div>짧은 광고</div><strong>1P 80%, 2P 20%</strong>
-				</li>
-				<li>
-					<img src="../img/sub-img-0003@3x.png" alt="복어" class="sub_fish">
-					<div>중간 광고</div><strong>1P 60%, 2P 30%<br>3P 10%</strong>
-				</li>
-				<li>
-					<img src="../img/sub-img-0004@3x.png" alt="복어" class="sub_fish">
-					<div>긴 광고</div><strong>1P, 2P, 3P<br>당첨 확률 동일</strong>
-				</li>
-			</ul>
-			<div class="info">당일 획득한 복어는 다음날 00:10에 초기화 돼요!</div>
-		</div>
+	<div class="roading">
+		<lottie-player class="lottie" src="../json/motion_loading.json" autoplay loop></lottie-player>
+		<p>곧 이어서<br>
+			보여드릴게요</p>
 	</div>
 	<script src="../js/pufferfish_game.js"></script>
 </body>
