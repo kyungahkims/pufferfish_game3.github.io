@@ -82,7 +82,7 @@ body {
   width: 100%;
   height: 100%;
   display: block;
-  background: url("../img/main-bg.jpg") no-repeat center/cover;
+  background: url("../img/main-bg.jpg") no-repeat top/cover;
   margin: auto;
   overflow: hidden;
 }
@@ -1024,23 +1024,24 @@ header .aquarium_btn_wrap .aquarium_btn .num {
   overflow-y: auto;
 }
 .wrap.aquarium_wrap header {
+  position: relative;
   height: 60px;
-  background-color: #fff;
+  background-color: transparent;
 }
 .wrap.aquarium_wrap header h2 {
   font-size: 20px;
   font-weight: 600;
   letter-spacing: -0.8px;
 }
-.wrap.aquarium_wrap header .inquiry_link {
+.wrap.aquarium_wrap header .close_btn {
   position: absolute;
-  right: 28px;
-  font-size: 16px;
-  letter-spacing: -0.64px;
-  color: #204bd8;
+  right: 20px;
+  width: 15px;
+  height: 15px;
+  background: url("../img/icon-close3.svg") no-repeat center;
 }
 .wrap.aquarium_wrap .contents {
-  padding: 18px 20px 20px;
+  padding: 8px 20px 20px;
   height: calc(100% - 60px);
   overflow-y: auto;
 }
@@ -1155,7 +1156,7 @@ header .aquarium_btn_wrap .aquarium_btn .num {
   width: 307px;
   min-height: 287px;
   background: url("../img/img-aquarium.svg") no-repeat center;
-  margin: 18px auto 0;
+  margin: 29px auto 0;
 }
 .wrap.aquarium_wrap .aquarium_box > div {
   text-align: center;
@@ -1229,6 +1230,80 @@ header .aquarium_btn_wrap .aquarium_btn .num {
   background-color: #222;
   margin-top: 21px;
   padding: 19px 10px 18px;
+}
+.wrap.aquarium_wrap .banner {
+  width: 100%;
+  border-radius: 6px;
+  background-color: #fff;
+  margin: 20px auto 0;
+}
+.wrap.aquarium_wrap .banner .banner_inner {
+  display: flex;
+  justify-content: space-between;
+  max-width: 320px;
+  width: 100%;
+  height: 100px;
+  border-radius: 6px;
+  background-color: #fff;
+  padding: 16px 10px 16px 8px;
+  margin: auto;
+}
+.wrap.aquarium_wrap .banner .banner_inner .img_cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 4px;
+  min-width: 0;
+}
+.wrap.aquarium_wrap .banner .banner_inner .img_cont h3 {
+  font-size: 17px;
+  letter-spacing: -0.68px;
+  color: #000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.wrap.aquarium_wrap .banner .banner_inner .img_cont p {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: -0.48px;
+  color: #6e6e6e;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 6px;
+}
+.wrap.aquarium_wrap .banner .banner_inner .img_box {
+  position: relative;
+  flex-shrink: 0;
+  width: 68px;
+  height: 68px;
+  margin-left: 20px;
+}
+.wrap.aquarium_wrap .banner .banner_inner .img_box span {
+  position: absolute;
+  top: -12px;
+  right: -14px;
+}
+.wrap.aquarium_wrap .banner .banner_inner .img_box .badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: -0.52px;
+  color: #fff;
+  border-radius: 50%;
+  background-color: #aa23e9;
+  z-index: 2;
+}
+.wrap.aquarium_wrap .banner .banner_inner .img_box .check {
+  width: 24px;
+  height: 24px;
+  background: url("../img/check.svg") no-repeat center;
+  z-index: 3;
 }
 .wrap.aquarium_wrap .box {
   border: 1px solid #fff;
@@ -1313,14 +1388,24 @@ header .aquarium_btn_wrap .aquarium_btn .num {
   margin-top: 10px;
 }
 .wrap.aquarium_wrap .info_box ul li {
+  position: relative;
+  display: block;
   font-size: 12px;
   letter-spacing: -0.48px;
   color: #666;
   line-height: 1.83;
+  flex-shrink: 0;
+  padding-left: 7px;
 }
 .wrap.aquarium_wrap .info_box ul li::before {
+  position: absolute;
   content: "·";
-  margin-right: 5px;
+  left: 0;
+}
+.wrap.aquarium_wrap .info_box ul li a {
+  flex-shrink: 0;
+  font-weight: bold;
+  color: #204bd8;
 }
 
 /* pufferfish_game1_8 */
@@ -1339,24 +1424,24 @@ header .aquarium_btn_wrap .aquarium_btn .num {
 }
 .wrap.information_wrap header .inquiry_link {
   position: absolute;
-  right: 28px;
+  left: 21px;
   font-size: 16px;
   letter-spacing: -0.64px;
   color: #204bd8;
+}
+.wrap.information_wrap header .close_btn {
+  position: absolute;
+  right: 20px;
+  width: 15px;
+  height: 15px;
+  background: url("../img/icon-close3.svg") no-repeat center;
 }
 .wrap.information_wrap .contents {
   height: calc(100% - 60px);
   overflow-y: auto;
 }
-.wrap.information_wrap .contents .title {
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: -0.72px;
-  color: #000;
-  margin-bottom: 18px;
-}
 .wrap.information_wrap .top_box {
-  padding: 20px 20px 36px;
+  padding: 23px 20px 36px;
 }
 .wrap.information_wrap .top_box p {
   display: flex;
@@ -2402,40 +2487,71 @@ header .aquarium_btn_wrap .aquarium_btn .num {
   margin-top: 20px;
 }
 
-/* inquiry_modal_wrap */
-.inquiry_modal_wrap {
+.popup_modal_wrap6 {
   position: fixed;
   top: 0;
-  left: 50%;
-  width: 100%;
-  max-width: 430px;
-  height: calc(var(--vh, 1vh) * 100);
-  background-color: #fff;
-  transition: 0.3s;
-  transform: translateX(-50%);
-  z-index: 999;
-  padding: 0 0 40px;
-  overflow-y: auto;
-}
-.inquiry_modal_wrap .inquiry_prev_btn {
-  position: absolute;
-  top: 21px;
-  left: 20px;
-  width: 10px;
-  height: 18px;
-  background: url("../img/prev.svg") no-repeat center;
-}
-.inquiry_modal_wrap .inquiry_title {
-  font-size: 20px;
-  font-weight: 600;
-  letter-spacing: -0.8px;
-  text-align: center;
-  padding: 18px 0;
-}
-.inquiry_modal_wrap .tab_wrap {
+  left: 0;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(var(--vh, 1vh) * 100);
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: all 0.3s;
+  z-index: 1000;
 }
-.inquiry_modal_wrap .tab_wrap button {
+.popup_modal_wrap6 .popup6 {
+  position: relative;
+  width: 100%;
+  max-width: 390px;
+  text-align: center;
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 64px 15px 25px;
+  margin: 0 20px;
+}
+.popup_modal_wrap6 .form_close_btn {
+  position: absolute;
+  top: 27px;
+  right: 26px;
+  width: 12px;
+  height: 12px;
+  background: url("../img/icon-close4.svg") no-repeat center;
+}
+.popup_modal_wrap6 .pop_inner .img_box {
+  width: 250px;
+  height: 208px;
+  background-color: #eee;
+  margin: auto;
+}
+.popup_modal_wrap6 .pop_inner .p_btn {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.72px;
+  color: #fff;
+  border-radius: 200px;
+  background-color: #1e2032;
+  padding: 12px 20px;
+  margin-top: 22px;
+}
+.popup_modal_wrap6 .pop_inner p {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.33;
+  letter-spacing: -0.6px;
+  color: #767676;
+  margin-top: 26px;
+}
+.popup_modal_wrap6 .pop_inner p strong {
+  color: #000;
+}
+
+/* inquiry_wrap */
+.inquiry_wrap .tab_wrap {
+  display: flex;
+  background-color: #fff;
+}
+.inquiry_wrap .tab_wrap button {
   width: 100%;
   font-size: 18px;
   letter-spacing: -0.72px;
@@ -2444,15 +2560,27 @@ header .aquarium_btn_wrap .aquarium_btn .num {
   background-color: transparent;
   padding: 18px 0 16px;
 }
-.inquiry_modal_wrap .tab_wrap button.active {
+.inquiry_wrap .tab_wrap button.active {
   font-weight: 600;
   color: #222;
   border-bottom: 2px solid #204bd8;
 }
-.inquiry_modal_wrap .tabcontent1 {
+.inquiry_wrap .contents {
+  height: calc(100% - 57px);
+  overflow-y: auto;
+  background-color: #fff;
+}
+.inquiry_wrap .contents .title {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.72px;
+  color: #000;
+  margin-bottom: 18px;
+}
+.inquiry_wrap .tabcontent1 {
   padding: 0 20px;
 }
-.inquiry_modal_wrap .inquiry_cont {
+.inquiry_wrap .inquiry_cont {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.71;
@@ -2460,11 +2588,14 @@ header .aquarium_btn_wrap .aquarium_btn .num {
   color: #3d3d3d;
   margin-top: 29px;
 }
-.inquiry_modal_wrap form > div .flex {
+.inquiry_wrap form {
+  margin-bottom: 100px;
+}
+.inquiry_wrap form > div .flex {
   display: flex;
   align-items: center;
 }
-.inquiry_modal_wrap form > div label {
+.inquiry_wrap form > div label {
   display: block;
   font-size: 14px;
   font-weight: bold;
@@ -2472,32 +2603,32 @@ header .aquarium_btn_wrap .aquarium_btn .num {
   color: #3d3d3d;
   margin-top: 28px;
 }
-.inquiry_modal_wrap form > div label.conts_label {
+.inquiry_wrap form > div label.conts_label {
   margin-top: 47px;
 }
-.inquiry_modal_wrap form > div .title_wrap {
+.inquiry_wrap form > div .title_wrap {
   position: relative;
   margin-top: 9px;
 }
-.inquiry_modal_wrap form > div .title_wrap.error input {
+.inquiry_wrap form > div .title_wrap.error input {
   border: 1px solid #f00;
 }
-.inquiry_modal_wrap form > div .title_wrap.error .error_box {
+.inquiry_wrap form > div .title_wrap.error .error_box {
   display: block;
 }
-.inquiry_modal_wrap form > div .title_wrap input {
+.inquiry_wrap form > div .title_wrap input {
   width: 100%;
   height: 50px;
   border-radius: 10px;
   border: 1px solid #c9c9c9;
   padding: 0 50px 0 15px;
 }
-.inquiry_modal_wrap form > div .title_wrap input::placeholder {
+.inquiry_wrap form > div .title_wrap input::placeholder {
   font-size: 14px;
   letter-spacing: -0.56px;
   color: #c9c9c9;
 }
-.inquiry_modal_wrap form > div .title_wrap .typing {
+.inquiry_wrap form > div .title_wrap .typing {
   position: absolute;
   right: 15px;
   top: 50%;
@@ -2506,36 +2637,36 @@ header .aquarium_btn_wrap .aquarium_btn .num {
   letter-spacing: -0.56px;
   color: #c9c9c9;
 }
-.inquiry_modal_wrap form > div .title_wrap .typing.active span {
+.inquiry_wrap form > div .title_wrap .typing.active span {
   color: #000;
 }
-.inquiry_modal_wrap form > div .textarea_wrap {
+.inquiry_wrap form > div .textarea_wrap {
   margin-top: 9px;
 }
-.inquiry_modal_wrap form > div .textarea_wrap.error .textarea_line {
+.inquiry_wrap form > div .textarea_wrap.error .textarea_line {
   border: 1px solid #f00;
 }
-.inquiry_modal_wrap form > div .textarea_wrap.error .error_box {
+.inquiry_wrap form > div .textarea_wrap.error .error_box {
   display: block;
 }
-.inquiry_modal_wrap form > div .textarea_wrap .textarea_line {
+.inquiry_wrap form > div .textarea_wrap .textarea_line {
   position: relative;
   height: 240px;
   border-radius: 10px;
   border: 1px solid #c9c9c9;
 }
-.inquiry_modal_wrap form > div .textarea_wrap textarea {
+.inquiry_wrap form > div .textarea_wrap textarea {
   width: 100%;
   height: 200px;
   border-radius: 10px;
   padding: 18px 15px 16px;
 }
-.inquiry_modal_wrap form > div .textarea_wrap textarea::placeholder {
+.inquiry_wrap form > div .textarea_wrap textarea::placeholder {
   font-size: 14px;
   letter-spacing: -0.56px;
   color: #c9c9c9;
 }
-.inquiry_modal_wrap form > div .textarea_wrap .typing {
+.inquiry_wrap form > div .textarea_wrap .typing {
   position: absolute;
   right: 15px;
   bottom: 16px;
@@ -2543,17 +2674,17 @@ header .aquarium_btn_wrap .aquarium_btn .num {
   letter-spacing: -0.56px;
   color: #c9c9c9;
 }
-.inquiry_modal_wrap form > div .textarea_wrap .typing.active span {
+.inquiry_wrap form > div .textarea_wrap .typing.active span {
   color: #000;
 }
-.inquiry_modal_wrap form > div .error_box {
+.inquiry_wrap form > div .error_box {
   display: none;
   font-size: 10px;
   letter-spacing: -0.4px;
   color: #f00;
   margin-top: 9px;
 }
-.inquiry_modal_wrap form .precaution_title {
+.inquiry_wrap form .precaution_title {
   display: flex;
   align-items: center;
   font-size: 14px;
@@ -2561,34 +2692,41 @@ header .aquarium_btn_wrap .aquarium_btn .num {
   letter-spacing: -0.56px;
   margin-top: 48px;
 }
-.inquiry_modal_wrap form .precaution_title::before {
+.inquiry_wrap form .precaution_title::before {
   content: "";
   width: 14px;
   height: 14px;
   background: url("../img/icon-info-2.svg") no-repeat center;
   margin-right: 5px;
 }
-.inquiry_modal_wrap form .precaution_conts {
+.inquiry_wrap form .precaution_conts {
   margin-top: 18px;
 }
-.inquiry_modal_wrap form .precaution_conts li {
+.inquiry_wrap form .precaution_conts li {
   font-size: 12px;
   line-height: 1.67;
   letter-spacing: -0.48px;
   color: #999;
 }
-.inquiry_modal_wrap form .precaution_conts li:not(:last-child) {
+.inquiry_wrap form .precaution_conts li:not(:last-child) {
   margin-bottom: 4px;
 }
-.inquiry_modal_wrap form .precaution_conts li::before {
+.inquiry_wrap form .precaution_conts li::before {
   content: " · ";
 }
-.inquiry_modal_wrap form .btn_wrap {
+.inquiry_wrap form .btn_wrap {
+  position: fixed;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 0;
+  max-width: 430px;
+  width: 100%;
   display: flex;
   column-gap: 10px;
-  margin-top: 40px;
+  padding: 12px 20px;
+  background-color: #fff;
 }
-.inquiry_modal_wrap form .btn_wrap button {
+.inquiry_wrap form .btn_wrap button {
   width: 100%;
   height: 56px;
   font-size: 18px;
@@ -2596,20 +2734,20 @@ header .aquarium_btn_wrap .aquarium_btn .num {
   letter-spacing: -0.72px;
   border-radius: 10px;
 }
-.inquiry_modal_wrap form .btn_wrap .cancle_btn {
+.inquiry_wrap form .btn_wrap .cancle_btn {
   color: #666;
   background-color: #fff;
   border: 1px solid #c9c9c9;
 }
-.inquiry_modal_wrap form .btn_wrap .submit_btn {
+.inquiry_wrap form .btn_wrap .submit_btn {
   color: #fff;
   border: 1px solid #204bd8;
   background-color: #204bd8;
 }
-.inquiry_modal_wrap .inquiry:not(:last-child) .question {
+.inquiry_wrap .inquiry:not(:last-child) .question {
   border-bottom: 1px solid #e9e9e9;
 }
-.inquiry_modal_wrap .inquiry .question {
+.inquiry_wrap .inquiry .question {
   width: calc(100% - 40px);
   display: flex;
   justify-content: space-between;
@@ -2620,20 +2758,20 @@ header .aquarium_btn_wrap .aquarium_btn .num {
   column-gap: 16px;
   cursor: pointer;
 }
-.inquiry_modal_wrap .inquiry .question.active {
+.inquiry_wrap .inquiry .question.active {
   border-bottom: none;
 }
-.inquiry_modal_wrap .inquiry .question .state {
+.inquiry_wrap .inquiry .question .state {
   font-size: 14px;
   font-weight: 500;
   letter-spacing: -0.56px;
   color: #666;
 }
-.inquiry_modal_wrap .inquiry .question .state.active {
+.inquiry_wrap .inquiry .question .state.active {
   font-weight: 600;
   color: #204bd8;
 }
-.inquiry_modal_wrap .inquiry .question .title {
+.inquiry_wrap .inquiry .question .title {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
@@ -2647,62 +2785,62 @@ header .aquarium_btn_wrap .aquarium_btn .num {
   overflow: hidden;
   margin-top: 6px;
 }
-.inquiry_modal_wrap .inquiry .question .date {
+.inquiry_wrap .inquiry .question .date {
   font-size: 12px;
   letter-spacing: -0.48px;
   color: #999;
   margin-top: 12px;
 }
-.inquiry_modal_wrap .inquiry .question img {
+.inquiry_wrap .inquiry .question img {
   transition: all 0.2s;
 }
-.inquiry_modal_wrap .inquiry .question img.active {
+.inquiry_wrap .inquiry .question img.active {
   transform: rotate(180deg);
 }
-.inquiry_modal_wrap .inquiry .answer {
+.inquiry_wrap .inquiry .answer {
   max-height: 0;
   overflow: hidden;
   background-color: #f9f9f9;
   padding: 0 20px;
   transition: max-height 0.3s ease, padding 0.3s ease;
 }
-.inquiry_modal_wrap .inquiry .answer > div:not(:last-child) {
+.inquiry_wrap .inquiry .answer > div:not(:last-child) {
   border-bottom: 1px solid #e9e9e9;
 }
-.inquiry_modal_wrap .inquiry .answer .my {
+.inquiry_wrap .inquiry .answer .my {
   padding: 30px 0 24px;
 }
-.inquiry_modal_wrap .inquiry .answer .my .title {
+.inquiry_wrap .inquiry .answer .my .title {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: -0.64px;
   color: #222;
 }
-.inquiry_modal_wrap .inquiry .answer .my .cont {
+.inquiry_wrap .inquiry .answer .my .cont {
   font-size: 14px;
   line-height: 1.57;
   letter-spacing: -0.56px;
   color: #222;
   margin-top: 14px;
 }
-.inquiry_modal_wrap .inquiry .answer .counselor {
+.inquiry_wrap .inquiry .answer .counselor {
   padding: 22px 0 24px;
 }
-.inquiry_modal_wrap .inquiry .answer .counselor .label {
+.inquiry_wrap .inquiry .answer .counselor .label {
   font-size: 14px;
   font-weight: 600;
   letter-spacing: -0.56px;
   color: #000;
 }
-.inquiry_modal_wrap .inquiry .answer .counselor .cont {
+.inquiry_wrap .inquiry .answer .counselor .cont {
   font-size: 14px;
   line-height: 1.57;
   letter-spacing: -0.56px;
   color: #222;
   margin-top: 6px;
 }
-.inquiry_modal_wrap .inquiry .answer .counselor .date {
+.inquiry_wrap .inquiry .answer .counselor .date {
   font-size: 12px;
   letter-spacing: -0.48px;
   color: #999;
