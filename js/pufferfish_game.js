@@ -36,7 +36,7 @@ document.getElementById('checkbox2') ?.addEventListener('change', e => {
 });
 
 /* 드래그 모달 닫기 */
-const POP_SELECTOR = '.pop, .pop2, .pop3, .pop4';
+const POP_SELECTOR = '.pop, .pop2, .pop4';
 const CLOSE_DISTANCE = 100;
 const TRANSITION_TIME = 100;
 
@@ -108,7 +108,7 @@ document.querySelectorAll(POP_SELECTOR).forEach(pop => {
 /* 클릭 닫기 */
 document.querySelectorAll('.close_btn').forEach(btn => {
 	btn.addEventListener('click', e => {
-		const pop = e.target.closest('.pop, .pop2, .pop3, .pop4');
+		const pop = e.target.closest('.pop, .pop2, .pop4');
 		if (!pop) return;
 
 		const modal = pop.closest('[class^="modal_wrap"]');
